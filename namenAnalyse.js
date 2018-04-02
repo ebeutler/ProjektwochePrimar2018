@@ -8,9 +8,27 @@
 				.toLowerCase();
 		if($('#algorithmus')[0].value === 'counting') {
 			algoCounting(daten);
-		} else {
+		} else if($('#algorithmus')[0].value === 'bubble') {
+			algoBubble(daten);
+		} else if($('#algorithmus')[0].value === 'quick') {
+			algoQuick(daten);
+		} else if($('#algorithmus')[0].value === 'insert') {
+			algoBubble(daten);
+		} else if($('#algorithmus')[0].value === 'merge') {
 			algoBubble(daten);
 		}
+	};
+	
+	var algoCounting = function(daten) {
+		var schritte = 0;
+		var eimer = neuerEimer();
+		for(i = 0; i < daten.length; i++) {
+			var index = daten.charCodeAt(i);
+			eimer[index] += String.fromCharCode(index);
+			schritte++;
+		}
+		schritte += eimer.length;
+		ergebnisTabelleAnzeigen(eimer.slice(), eimer.join(''), schritte);
 	};
 	
 	var algoBubble = function(daten) {
@@ -32,17 +50,18 @@
 		ergebnisTabelleAnzeigen(datenFormatieren(daten), daten, schritte);
 	};
 	
-	var algoCounting = function(daten) {
+	var algoQuick = function(daten) {
 		var schritte = 0;
-		var eimer = neuerEimer();
-		for(i = 0; i < daten.length; i++) {
-			var index = daten.charCodeAt(i);
-			eimer[index] += String.fromCharCode(index);
-			schritte++;
-		}
-		schritte += eimer.length;
 		ergebnisTabelleAnzeigen(eimer.slice(), eimer.join(''), schritte);
 	};
+	
+	var quickSort = function(mitte, daten, schritte) {
+		var links = [];
+		var rechts = [];
+		for(i = 0; i < daten.length; i++) {
+			
+		}
+	}
 	
 	var ergebnisTabelleAnzeigen = function(eimer, sortiert, schritte) {
 		$('#schritte').text(schritte.toLocaleString('de-CH'));
