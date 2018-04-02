@@ -4,6 +4,7 @@
 		event.preventDefault();
 		var daten = $('#daten')[0].value
 				.replace(/\s/g, '')
+				.replace(/-/g, '')
 				.toLowerCase();
 		if($('#algorithmus')[0].value === 'counting') {
 			algoCounting(daten);
@@ -44,8 +45,7 @@
 	};
 	
 	var ergebnisTabelleAnzeigen = function(eimer, sortiert, schritte) {
-		$('#resultat').text(sortiert);
-		$('#schritte').text(schritte);
+		$('#schritte').text(schritte.toLocaleString('de-CH'));
 		$('li.resultat').remove();
 		var eimerNachLaenge = eimer.sort(function(ele1, ele2) { return ele2.length - ele1.length; });
 		var max = -1;
@@ -60,6 +60,8 @@
 				$('ul#resultate').append(neuerEintrag);
 			}
 		}
+		var top = $('ul#resultate').outerHeight() - $('form').outerHeight() + 20;
+		$('#resultat').text(sortiert).css('margin-top', Math.max(20, top));
 	};
 	
 	var datenFormatieren = function(daten) {
