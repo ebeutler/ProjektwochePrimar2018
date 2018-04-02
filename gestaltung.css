@@ -1,0 +1,46 @@
+html {
+	font-family: sans-serif;
+}
+
+textarea#daten {
+    width: 200px;
+    height: 300px;
+}
+
+ul#resultate {
+	position: absolute;
+    width: 550px;
+    margin-top: 0;
+    list-style: none;
+    margin-left: 200px;
+}
+
+a#count {
+    display: inline-block;
+	margin-top: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #22d;
+	border: 1px dotted black;
+    padding: 2px;
+}
+
+ul li {
+	height: 20px;
+}
+
+li.resultat span.zahl {
+    float: right;
+}
+
+li.resultat span.balken {
+    display: inline-block;
+    height: 16px;
+    background-color: #0000ff40;
+}
+
+div#resultat {
+    margin-top: 20px;
+    border: 1px dashed lightgray;
+    padding: 4px;
+}
