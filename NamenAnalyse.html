@@ -7,8 +7,12 @@
 		<link rel="stylesheet" type="text/css" href="gestaltung.css"/>
 	</head>
 	<body>
-		<ul id="resultate">
-			<li>Schritte: <span id="schritte"></span></li>
+		<ul id="resultate" style="display: none;">
+			<li>
+				Schritte: <span id="schritte"></span>,
+				Buchst.: <span id="buchstaben"></span>,
+				Schritte (min / max): <span id="minmax"></span>
+			</li>
 		</ul>
 		<form action="#" method="post">
 			<textarea id="daten" value="" name="data"></textarea><br />
@@ -18,6 +22,8 @@
 			</select><br />
 			<a href="" id="count">Berechnen</a>
 		</form>
-		<div id="resultat"></div>
+		<div id="resultat" style="display: none;"></div>
+		<div id="resultatGedreht" style="display: none;"></div>
+		<div id="laufzeit" style="display: none;"></div>
 	</body>
 </html>
