@@ -33,12 +33,12 @@
 						daten = daten.replaceAt(i, daten[i+1]);
 						daten = daten.replaceAt(i+1, temp);
 						fertig = false; // Da zwei Buchstaben gedreht wurden war noch nicht alles sortiert
-						schritte++;
 					}
+					schritte++;
 				}
 			}
 		} while(!fertig);
-		ergebnisTabelleAnzeigen(datenFormatieren(daten), daten, schritte, daten.length, daten.length, daten.length*daten.length);
+		ergebnisTabelleAnzeigen(datenFormatieren(daten), daten, schritte, daten.length, daten.length-1, (daten.length-1)*daten.length);
 	};
 	
 	// Berechnen der Ergebnisse mit 'Counting Sort'
