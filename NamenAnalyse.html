@@ -17,11 +17,15 @@
 		<form action="#" method="post">
 			<textarea id="daten" value="" name="data"></textarea><br />
 			<select id="algorithmus" name="algorithm">
-				<option value="counting">Counting Sort</option>
-				<option value="bubble">Bubble Sort</option>
-				<option value="quick">Quick Sort</option>
-				<option value="insert">Insertion Sort</option>
-				<option value="merge">Merge Sort</option>
+				<optgroup label="Besprochen">
+					<option value="bubble">Bubble Sort</option>
+					<option value="counting">Counting Sort</option>
+				</optgroup>
+				<optgroup label="Andere">
+					<option value="insert">Insertion Sort</option>
+					<option value="merge">Merge Sort</option>
+					<option value="quick">Quick Sort</option>
+				</optgroup>
 			</select><br />
 			<a href="" id="count">Berechnen</a>
 		</form>
